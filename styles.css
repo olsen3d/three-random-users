@@ -1,0 +1,29 @@
+* {
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: darkslategray;
+    text-align: center;
+    margin: 1rem;
+}
+
+#users {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    text-align: center;
+    margin: 1rem;
+}
+
+.user {
+    background-color: darkslategray;
+    color: white;
+    height: 200px;
+    width: 200px;
+    border: solid black 2px;
+    margin: 1rem;
+}

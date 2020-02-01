@@ -1,0 +1,6 @@
+'https://acme-users-api-rev.herokuapp.com/api/users/random'
+
+user card 
+    full name
+    email 
+    avatar
