@@ -34,3 +34,23 @@ const users = Promise.all([userOne, userTwo, userThree])
 
     userContainer.innerHTML = html
 })
+
+//hash change sone clicked on a user or title
+window.addEventListener('hashchange', () => {
+    let selectedId = window.location.hash.slice(1);
+    let users = [...document.querySelectorAll('.user')]
+    //if no one is selected display all
+    if (selectedId === '') {
+        users.forEach( user => {
+            user.classList.remove('hide')
+        })
+    } else { //if a user is selected hide others
+        users.forEach( user => {
+            if (selectedId === user.id) {
+                user.classList.remove('hide')
+            } else {
+                user.classList.add('hide')
+            }
+        })
+    }
+})
