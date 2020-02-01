@@ -21,7 +21,7 @@ const users = Promise.all([userOne, userTwo, userThree])
 
     const html = userData.map( (user, idx) => {
         return `
-        <div class='header'>
+        <div class='header'id='${idx}'>
             <a href='#${idx}'> ${idx + 1}</a>
             <div class='user' id='${idx}'>
             <span>${user.fullName}</span>
@@ -35,22 +35,18 @@ const users = Promise.all([userOne, userTwo, userThree])
     userContainer.innerHTML = html
 })
 
-//hash change sone clicked on a user or title
+//hash change clicked on a user or title
 window.addEventListener('hashchange', () => {
     let selectedId = window.location.hash.slice(1);
     let users = [...document.querySelectorAll('.user')]
+    let headers = [...document.querySelectorAll('.header')]
     //if no one is selected display all
     if (selectedId === '') {
-        users.forEach( user => {
-            user.classList.remove('hide')
-        })
-    } else { //if a user is selected hide others
-        users.forEach( user => {
-            if (selectedId === user.id) {
-                user.classList.remove('hide')
-            } else {
-                user.classList.add('hide')
-            }
-        })
+        users.forEach( user => user.classList.remove('hide'))
+        headers.forEach( header => header.classList.remove('selected'))
+    } else {
+        users.forEach( user => {selectedId === user.id ? user.classList.remove('hide') : user.classList.add('hide')})
+        headers.forEach( header => {selectedId === header.id ? header.classList.add('selected') : header.classList.remove('selected')})
     }
+
 })

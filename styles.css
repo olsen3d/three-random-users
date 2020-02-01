@@ -23,6 +23,17 @@ h1 > a {
     margin: 1rem;
 }
 
+a {
+    color: darkslategray;
+}
+
+.selected > a {
+    background-color: darkslategray;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
 .user {
     background-color: darkslategray;
     color: white;
@@ -30,13 +41,12 @@ h1 > a {
     width: 300px;
     border: solid black 1px;
     border-radius: 2rem;
-    margin: 1rem;
+    margin: 2rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    align-content: space-between;
 }
 
 .user.hide {
