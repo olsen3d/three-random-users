@@ -11,6 +11,7 @@ h1 {
 
 #users {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -19,11 +20,32 @@ h1 {
     margin: 1rem;
 }
 
+.hide {
+    display: none;
+}
+
 .user {
     background-color: darkslategray;
     color: white;
-    height: 200px;
-    width: 200px;
-    border: solid black 2px;
+    height: 300px;
+    width: 300px;
+    border: solid black 1px;
+    border-radius: 2rem;
     margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-between;
 }
+
+span {
+    background-color: darkslategray;
+}
+
+img {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    }

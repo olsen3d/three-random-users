@@ -17,9 +17,6 @@ const userThree = fetch(API)
 //process users
 const users = Promise.all([userOne, userTwo, userThree])
     .then( userData => {
-    // const userOne = userData[0]
-    // const userTwo = userData[1]
-    // const userThree = userData[2]
     console.log(userData)
 
     const html = userData.map( (user, idx) => {
@@ -27,11 +24,11 @@ const users = Promise.all([userOne, userTwo, userThree])
         <div class='header'>
             <a href='#${idx}'> ${idx + 1}</a>
             <div class='user' id='${idx}'>
-            ${user.fullName}
-            ${user.email}
+            <span>${user.fullName}</span>
+            <span>${user.email}</span>
+            <img src='${user.avatar}'>
             </div>
         </div>
-        
         `
     }).join('')
 
