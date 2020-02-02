@@ -38,10 +38,10 @@ a {
     background-color: darkslategray;
     color: white;
     height: 300px;
-    width: 300px;
+    width: calc(100%vw/3);
     border: solid black 1px;
     border-radius: 2rem;
-    margin: 2rem;
+    margin: 2rem 5rem;
     padding: 1rem;
     display: flex;
     flex-direction: column;
